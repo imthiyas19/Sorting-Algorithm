@@ -19,7 +19,27 @@ To write a program to perform selection sort and insertion sort using python pro
 5.	Repeat the steps 2 to 4 for sorting all the elements in the array.
 ## Program:
 i)	#Selection Sort
-```
+```python 
+Program for linear search method to match the item in a list
+Developed by:  Mohamed Imthiyas M
+RegisterNumber: 22005042
+
+def linearSearch(array,n,k):
+    for i in range(0,n):
+        if array[i]==k:
+            return i
+    return -1
+array = eval(input())
+array.sort()
+k = eval(input())
+n = len(array)
+result = linearSearch(array,n,k)
+if result >=0:
+    print(array)
+    print("Element found at index: ",result)
+else:
+    print(array)
+    print("Element not found")
 
 
 
@@ -27,17 +47,33 @@ i)	#Selection Sort
 
 ```
 ii)	#Insertion Sort
-```
+```python
+Program to sort the elements in the list using the Insertion Sort algorithm.
+Developed by: Mohamed Imthiyas M
+RegisterNumber: 22005042
 
-
-
+def insertion_sort(nums):
+    for i in range(1,len(nums)):
+        item = nums[i]
+        j = i-1
+        while j>=0 and nums[j]>item:
+            nums[j+1] = nums[j]
+            j-=1
+        nums[j+1] = item
+    return nums
+list_of_nums = eval(input())
+value = insertion_sort(list_of_nums)
+print(value)
 
 
 
 ```
 
 ## Output:
-
+Selection Sort:
+![output](op.png)
+Insertion Sort:
+![output](mm.png)
 
 ## Result:
 Thus the program is written to perform selection sort and insertion sort using python programming.
